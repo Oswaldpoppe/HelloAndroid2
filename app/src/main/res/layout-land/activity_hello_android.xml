@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    tools:context="com.oswald.android.helloandroid.HelloAndroid">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:civ_border_width="3dp"
+        app:civ_border_color="#ffffff"
+        android:src="@drawable/background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Slogan"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/architects_daughter"
+        android:text="@string/slogan"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        />
+    <TextView
+        style="@style/textLayout"
+        android:text="@string/school"
+        android:id="@+id/name"
+        android:layout_below="@id/Slogan"
+        android:layout_alignLeft="@id/Slogan"
+        android:layout_alignStart="@id/Slogan"
+        android:drawableLeft="@drawable/ic_business_center"
+        android:drawableStart="@drawable/ic_business_center"
+        android:drawablePadding="10dp"/>
+    <TextView
+        style='@style/textLayout'
+        android:text="@string/adress"
+        android:id="@+id/place"
+        android:layout_below="@id/name"
+        android:layout_alignLeft="@id/Slogan"
+        android:layout_alignStart="@id/Slogan"
+        android:drawableLeft="@drawable/ic_place"
+        android:drawableStart="@drawable/ic_place"
+        android:drawablePadding="10dp"
+        android:autoLink="map"
+        android:textColorLink="@android:color/white"
+        />
+    <TextView
+        style='@style/textLayout'
+        android:text="@string/phone"
+        android:id="@+id/Phone"
+        android:layout_below="@id/place"
+        android:layout_alignLeft="@id/Slogan"
+        android:layout_alignStart="@id/Slogan"
+        android:drawableLeft="@drawable/phone"
+        android:drawableStart="@drawable/phone"
+        android:drawablePadding="10dp"
+        android:autoLink="phone"
+        android:textColorLink="@android:color/white"
+        />
+    <TextView
+        style="@style/textLayout"
+        android:text="@string/site"
+        android:id="@+id/site"
+        android:layout_below="@id/Phone"
+        android:layout_alignLeft="@id/Slogan"
+        android:layout_alignStart="@id/Slogan"
+        android:drawableLeft="@drawable/ic_home"
+        android:drawableStart="@drawable/ic_home"
+        android:drawablePadding="10dp"
+        android:autoLink="web"
+        android:textColorLink="@android:color/white"
+        />
+</RelativeLayout>
