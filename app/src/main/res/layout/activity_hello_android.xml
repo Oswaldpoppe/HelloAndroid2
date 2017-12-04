@@ -15,8 +15,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        app:civ_border_width="5dp"
-        app:civ_border_color="#ffffff"
+        app:civ_border_width="4dp"
+        app:civ_border_color="#20000000"
+        app:civ_border_overlay="true"
         android:src="@drawable/background" />
 
     <TextView
