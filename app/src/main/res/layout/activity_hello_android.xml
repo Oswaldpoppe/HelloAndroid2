@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,78 +7,124 @@
     android:background="@drawable/background_color"
     tools:context="com.oswald.android.helloandroid.HelloAndroid">
 
-
-    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        app:civ_border_width="4dp"
-        app:civ_border_color="#20000000"
-        app:civ_border_overlay="true"
-        android:src="@drawable/background" />
-
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Slogan"
-        android:layout_below="@+id/profile_image"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/architects_daughter"
-        android:text="@string/slogan"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:textColor="#ffffff"
-        />
-    <TextView
-        style="@style/textLayout"
-        android:text="@string/school"
-        android:id="@+id/name"
-        android:layout_below="@id/Slogan"
-        android:layout_alignLeft="@id/Slogan"
-        android:layout_alignStart="@id/Slogan"
-        android:drawableLeft="@drawable/ic_business_center"
-        android:drawableStart="@drawable/ic_business_center"
-        android:drawablePadding="10dp"/>
-    <TextView
-        style='@style/textLayout'
-        android:text="@string/adress"
-        android:id="@+id/place"
-        android:layout_below="@id/name"
-        android:layout_alignLeft="@id/Slogan"
-        android:layout_alignStart="@id/Slogan"
-        android:drawableLeft="@drawable/ic_place"
-        android:drawableStart="@drawable/ic_place"
-        android:drawablePadding="10dp"
-        android:autoLink="map"
-        android:textColorLink="@android:color/white"
-        />
-    <TextView
-        style='@style/textLayout'
-        android:text="@string/phone"
-        android:id="@+id/Phone"
-        android:layout_below="@id/place"
-        android:layout_alignLeft="@id/Slogan"
-        android:layout_alignStart="@id/Slogan"
-        android:drawableLeft="@drawable/phone"
-        android:drawableStart="@drawable/phone"
-        android:drawablePadding="10dp"
-        android:autoLink="phone"
-        android:textColorLink="@android:color/white"
-        />
-    <TextView
-        style="@style/textLayout"
-        android:text="@string/site"
-        android:id="@+id/site"
-        android:layout_below="@id/Phone"
-        android:layout_alignLeft="@id/Slogan"
-        android:layout_alignStart="@id/Slogan"
-        android:drawableLeft="@drawable/ic_home"
-        android:drawableStart="@drawable/ic_home"
-        android:drawablePadding="10dp"
-        android:autoLink="web"
-        android:textColorLink="@android:color/white"
-        />
-</RelativeLayout>
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            android:src="@mipmap/interior_2"
+            app:civ_border_color="#75000000"
+            app:civ_border_overlay="true"
+            app:civ_border_width="4dp" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:src="@drawable/logo_tekst" />
+
+        <LinearLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/place"
+                style='@style/infoTextLayout'
+                android:autoLink="map"
+                android:background="#30000000"
+                android:drawableLeft="@drawable/ic_place"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_place"
+                android:onClick="maps"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/address"
+                android:textColorLink="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:id="@+id/Phone"
+                style='@style/infoTextLayout'
+                android:autoLink="phone"
+                android:background="#20000000"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/phone"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/phone"
+                android:textColorLink="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:id="@+id/site"
+                style="@style/infoTextLayout"
+                android:autoLink="web"
+                android:background="#20000000"
+                android:drawableLeft="@drawable/ic_home"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_home"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/site"
+                android:textColorLink="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:id="@+id/opening_hours"
+                style="@style/infoTextLayout"
+                android:background="#20000000"
+                android:drawableLeft="@drawable/ic_query_builder"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_query_builder"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/opening_hours" />
+
+        </LinearLayout>
+
+        <Button
+            style="@style/buttonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:onClick="contactUs"
+            android:text="@string/contact_button" />
+    </RelativeLayout>
+</ScrollView>

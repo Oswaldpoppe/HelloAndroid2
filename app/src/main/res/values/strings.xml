@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">HelloAndroid</string>
-    <string name="school">Udacity</string>
-    <string name="slogan">Learn. Think. Do.</string>
-    <string name="adress"><u>2465 Latham St\nMountain View, CA 94043</u></string>
-    <string name="phone">+1 650&#8211;555&#8211;5555</string>
-    <string name="site">www.udacity.com</string>
+    <string name="app_name">GitanCard</string>
+    <string name="address"><u>Diestsesteenweg 253, \n3010 KESSEL-LO</u></string>
+    <string name="phone">+32 16 53 40 86</string>
+    <string name="site">www.cafegitan.be</string>
+    <string name="contact_button">Make a reservation</string>
+    <string name="mail_address">mailto:info@cafegitan.be</string>
+    <string name="opening_hours">Sun - Thu: 17p.m. - 12p.m.\nFri - Sat: 17p.m. - 2a.m.\nMon: closed</string>
+    <string name="subject">Reservation</string>
+    <string name="mail_content">Beste\n\nGraag had ik volgende reservatie gemaakt:\n\nDatum: \nUur: \nAantal Personen: \nTelefoon: \n\nGroeten,</string>
 </resources>
